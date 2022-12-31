@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Frases Xingando Ian</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffff00;
+        font-family: 'Comic Sans MS', sans-serif;
+      }
+
+      button {
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      p {
+        color: #f44336;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="gerarBtn">Gerar</button>
+    <p id="frase"></p>
+
+    <script>
+      const gerarBtn = document.getElementById("gerarBtn");
+      const frase = document.getElementById("frase");
+
+      const frases = [
+"Ian é um idiota!",
+        "Ian é um burro!",
+        "Ian é um imbecil!",
+        "Ian é um cabeça-oca!",
+        "Ian não tem cérebro!",
+        "Ian é um fracassado!",
+        "Ian é um inútil!",
+        "Ian é um estúpido!",
+        "Ian é um cretino!",
+        "Ian é um babaca!",
+        "Ian é um macaco!"
+      ];
+
+      let indice = 0;
+
+      gerarBtn.addEventListener("click", function() {
+        frase.textContent = frases[indice];
+        indice = (indice + 1) % frases.length;
+      });
+    </script>
+  </body>
+</html>
